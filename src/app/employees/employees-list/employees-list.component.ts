@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IEmployee } from './../../shared/interfaces';
 
 @Component({
   selector: 'app-employees-list',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeesListComponent implements OnInit {
 
-  filteredEmployees: any[] = [];
+  filteredEmployees: IEmployee[] = [];
   employeesSalaryTotal: number;
   currencyCode = 'USD';
   constructor() { }
