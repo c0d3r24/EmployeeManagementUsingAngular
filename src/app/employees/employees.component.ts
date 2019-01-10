@@ -9,11 +9,7 @@ export class EmployeesComponent implements OnInit {
 
   title: string;
   employees: IEmployee[];
-  isVisible = true;
 
-  changeVisibility() {
-    this.isVisible = !this.isVisible;
-  }
   constructor() { }
 
   ngOnInit() {
