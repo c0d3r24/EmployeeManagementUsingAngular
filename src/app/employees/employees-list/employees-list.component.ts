@@ -26,6 +26,20 @@ export class EmployeesListComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  filter( data: string ) {
+    if ( data ) {
+      this.filteredEmployees = this.employees.filter((emp: IEmployee) => {
+        return emp.name.toLowerCase().indexOf(data.toLowerCase()) > -1 ||
+               emp.city.toLowerCase().indexOf(data.toLowerCase()) > -1 ||
+               emp.projects.toString().indexOf(data) > -1;
+      });
+    } else {
+      this.filteredEmployees = this.employees;
+    }
+    this.calculateEmployeesProjects();
+  }
+
   calculateEmployeesProjects() {
     this.employeesProjectCount = 0;
     this.filteredEmployees.forEach((emp: IEmployee) => {
