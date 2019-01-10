@@ -13,12 +13,12 @@
   <tr *ngFor="let emp of filteredEmployees">
     <td>
       <a>
-        {{ emp.name }}
+        {{ emp.name | capitalize }}
       </a>
     </td>
     <td>{{ emp.city }}</td>
-    <td>{{ emp.salary }}</td>
-    <td>{{ emp.started }}</td>
+    <td>{{ emp.salary | currency }}</td>
+    <td>{{ emp.started | date }}</td>
     <td>{{ emp.projects }}</td>
   </tr>
   <tr *ngIf="filteredEmployees && filteredEmployees.length">
