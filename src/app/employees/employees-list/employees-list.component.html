@@ -1,25 +1,33 @@
+<app-employees-filter-textbox></app-employees-filter-textbox>
 <br>
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>City</th>
-      <th>Salary</th>
-      <th>Started</th>
-      <th>Projects</th>
+      <th (click)="sort('name')">Name</th>
+      <th (click)="sort('city')">City</th>
+      <th (click)="sort('salary')">Salary</th>
+      <th (click)="sort('started')">Started</th>
+      <th (click)="sort('projects')">Projects</th>
     </tr>
   </thead>
-  <tr>
+  <tr *ngFor="let emp of filteredEmployees">
     <td>
       <a>
-        Junaid
+        {{ emp.name }}
       </a>
     </td>
-    <td>Rochester</td>
-    <td>0.00</td>
-    <td>2017/10/10</td>
-    <td>2</td>
+    <td>{{ emp.city }}</td>
+    <td>{{ emp.salary }}</td>
+    <td>{{ emp.started }}</td>
+    <td>{{ emp.projects }}</td>
+  </tr>
+  <tr *ngIf="filteredEmployees && filteredEmployees.length">
+    <td colspan="4">&nbsp;</td>
+    <td>{{ employeesProjectCount }}</td>
+  </tr>
+  <tr *ngIf="!filteredEmployees || !filteredEmployees.length">
+    <td colspan="4">No customers found</td>
   </tr>
 
 </table>
-<span>Employees Count on this page: </span>
+<span>Employees Count on this page: {{ filteredEmployees.length }} </span>
