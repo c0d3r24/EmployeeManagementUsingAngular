@@ -7,7 +7,7 @@ export interface IEmployee {
   salary: number;
 }
 
-export interface IProjects {
+export interface IProject {
   employeeId: number;
   projectIds: IProjectItem[];
 }
