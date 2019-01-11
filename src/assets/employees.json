@@ -4,7 +4,7 @@
       "name": "Abd Allah",
       "city": "Jeddah",
       "salary": 6000,
-      "started": "new Date(2017, 10, 10)",
+      "started": "Fri Jan 11 2019",
       "projects": 2
     },
     {
@@ -12,7 +12,7 @@
       "name": "Humed Shaikh",
       "city": "Nagpur",
       "salary": 5000,
-      "started": "new Date(2018, 4, 4)",
+      "started": "Fri Jan 11 2019",
       "projects": 2
     },
     {
@@ -20,7 +20,7 @@
       "name": "Mateen Athar",
       "city": "Nagpur",
       "salary": 2500,
-      "started": "new Date(2018, 11, 12)",
+      "started": "Fri Jan 11 2019",
       "projects": 3
     },
     {
@@ -28,7 +28,7 @@
       "name": "Jeremy Tuner",
       "city": "New York",
       "salary": 4000,
-      "started": "new Date(2017, 10, 11)",
+      "started": "Fri Jan 11 2019",
       "projects": 1
     },
     {
@@ -36,7 +36,7 @@
       "name": "Goerge Washington",
       "city": "Rochester",
       "salary": 5000,
-      "started": "new Date(2016, 12, 11)",
+      "started": "Fri Jan 11 2019",
       "projects": 1
     },
     {
@@ -44,7 +44,7 @@
       "name": "Michael Bay",
       "city": "New Jersey",
       "salary": 6000,
-      "started": "new Date(2019, 1, 1)",
+      "started": "Fri Jan 11 2019",
       "projects": 2
     }
   ]

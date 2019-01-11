@@ -15,6 +15,8 @@ export class EmployeesComponent implements OnInit {
 
   ngOnInit() {
     this.title = 'Employees';
+    this.dataService.getEmployees()
+        .subscribe((emps: IEmployee[]) => this.employees = emps);
     // this.employees = [
     //   { id: 1, name: 'Abd Allah', city: 'Jeddah', salary: 6000, started: new Date(2017, 10, 10), projects: 2},
     //   { id: 2, name: 'Humed Shaikh', city: 'Nagpur', salary: 5000, started: new Date(2018, 4, 4), projects: 2},

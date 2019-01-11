@@ -15,7 +15,8 @@ export class DataService {
   constructor(private http: HttpClient) {}
 
   getEmployees(): Observable<IEmployee[]> {
-    return this.http.get<IEmployee[]>(this.baseUrl + 'employee.json')
+    console.log('Hello there');
+    return this.http.get<IEmployee[]>(this.baseUrl + 'employees.json')
                     .pipe(
                       catchError(this.handleError)
                     );
@@ -25,7 +26,7 @@ export class DataService {
     return this.http.get<IEmployee[]> (this.baseUrl  + 'employees.json')
                     .pipe(
                       map(emp => {
-                        const employee = emp.filter((e : IEmployee) => e.id === id);
+                        const employee = emp.filter((e: IEmployee) => e.id === id);
                         return (employee && employee.length) ? employee[0] : null;
                       }),
                       catchError(this.handleError)
