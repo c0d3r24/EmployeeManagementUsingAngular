@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IEmployee } from './../../shared/interfaces';
-
+import { SorterService } from './../../core/sorter.service';
 @Component({
   selector: 'app-employees-list',
   templateUrl: './employees-list.component.html',
@@ -22,7 +22,7 @@ export class EmployeesListComponent implements OnInit {
   filteredEmployees: IEmployee[] = [];
   employeesProjectCount: number;
   currencyCode = 'USD';
-  constructor() { }
+  constructor(private sorterService: SorterService) { }
 
   ngOnInit() {
   }
@@ -48,7 +48,7 @@ export class EmployeesListComponent implements OnInit {
   }
 
   sortEmployee(field: string) {
-
+    this.sorterService.sort(this.filteredEmployees, field);
   }
 
 }
